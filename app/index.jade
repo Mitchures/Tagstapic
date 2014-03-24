@@ -1,0 +1,93 @@
+doctype html
+//[if IE 9]><html class="lt-ie10" lang="en" > <![endif]
+html(class='no-js', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Tagstapic
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/style2.css')
+    link(rel='stylesheet', href='/css/foundation.css')
+    link(rel='stylesheet', href='/css/app.css')
+    script(src='/js/vendor/modernizr.js')
+body
+  //-----Background Slideshow-------
+  #slideshow
+    ul.cb-slideshow
+      li
+        span Image 1
+        div
+      li
+        span Image 2
+        div
+      li
+        span Image 3
+        div
+      li
+        span Image 4
+        div
+      li
+        span Image 5
+        div
+      li
+        span Image 6
+        div
+
+  //-----Background Slideshow--------
+
+  //-----Top Nav Bar-----------------
+  .nav.top-bar(data-topbar)
+    section.top-bar-section
+      ul.text-area
+        li.name
+          a#tagstapic TAGSTAPIC
+      ul.right
+        li.active
+          a.links(href='https://github.com/MitchellSH')
+            i(class='fa fa-github fa-2x')
+        li.active
+          a.links(href='https://twitter.com/Mitch_Hollander')
+            i(class='fa fa-twitter fa-2x')
+        li.active
+          a.links(href='http://instagram.com/mitchell_hollander')
+            i(class='fa fa-instagram fa-2x')
+        li.active
+          a.links(href='https://plus.google.com/u/0/111891834390020142373/posts')
+            i(class='fa fa-google-plus fa-2x')
+      ul.left
+             li.has-dropdown.full-width.not-click
+                a(href='#')#menu MENU
+                  i(class='fa fa-bars fa-1x')
+                ul.dropdown
+                  li.list
+                    a.search#search Search Tag
+
+  //-----Top Nav Bar----------------
+              
+              
+  //-----Title and Search Bar-------
+  .row
+    .small-12.columns
+      #container
+        h1#title #Tagstapic
+  .row
+    .small-12.columns
+      #container2
+        #pic-box 
+          #target
+        input#search-box(type='text', placeholder='Search Tag')
+        a#bam(href='#')
+          i#search-icon(class='fa fa-search fa-2x')
+
+  //-----Title and Search Bar--------
+
+
+
+  script(src='/js/vendor/jqueryUI.js')
+  script(src='/js/vendor/jquery.js')
+  script(src='/js/vendor/jquery.flip.min.js')
+  script(src='/js/vendor/foundation.min.js')
+  script(src='/js/vendor/lodash.js')
+  script(src='/js/source/main.js')
+

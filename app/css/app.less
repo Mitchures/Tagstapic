@@ -1,0 +1,265 @@
+//-------Font Imports-----------------
+@import url(http://fonts.googleapis.com/css?family=Lato:100, 200);
+@import url(http://fonts.googleapis.com/css?family=League+Script);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300);
+//-------Font Imports-----------------
+
+
+
+//---------Top Nav Bar CSS---------------------
+
+
+#tagstapic{
+  font-family: 'Alegreya Sans SC', sans-serif !important;
+}
+
+a{
+  //text-shadow: 0px 0px 5px black;
+  color: grey !important;
+  //background: linear-gradient(#a1a1a1, grey) !important;
+  background: white !important;
+  font-family: 'Lato', sans-serif !important;
+}
+
+a:hover{
+  //text-shadow: 0px 0px 5px white;
+  color: lightblue !important;
+}
+
+a:active{
+  color: white !important;
+  //text-shadow: 0px 0px 5px black;
+  //background: linear-gradient(grey, #a1a1a1) !important;
+  background: lightblue !important;
+}
+
+
+.link:active{
+  background: lightblue !important;
+  color: white !important;
+}
+
+
+.top-bar{
+  border: transparent;
+  font-family: 'Lato', sans-serif;
+  //background: linear-gradient(#a1a1a1, grey) !important;
+  background: white !important;
+  box-shadow: 0px 0px 15px white;
+}
+
+
+//-----Top Nav Bar CSS-------------------------------
+
+//-----Search Bar CSS--------------------
+
+#search-box{
+  border-radius: 4px;
+}
+
+#search-icon:hover{
+  color: hotpink !important;
+}
+
+#search-icon:active{
+  color: limegreen !important;
+}
+
+#pic-box{
+  width: 1000px;
+  height: 200px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+#target{
+  width: 900px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
+//-----Search Bar CSS--------------------
+
+//-----Main CSS---------------
+
+h1{
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: grey;
+  //text-shadow: 0px 0px 15px black;
+  font-size: 100px;
+  font-family: 'Lato', sans-serif !important;
+}
+
+#search-icon{
+  color: white !important;
+  position: relative;
+  float: right;
+  bottom: 55px;
+  right: 245px;
+}
+
+#search-box{
+  width: 400px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#container2{
+  display: none;
+}
+
+//-----Main CSS---------------
+
+
+
+
+
+
+//------Background Sildeshow CSS------------
+
+h4{
+  color: white !important;
+}
+
+.cb-slideshow,
+.cb-slideshow:after{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 0; 
+}
+
+.cb-slideshow:after{
+  content: '';
+  //background: transparent url(/media/pattern.png) repeat top left; 
+  background: linear-gradient(to bottom, white, transparent);
+}
+
+.cb-slideshow li span{ 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 36s linear infinite 0s; 
+}
+
+.cb-slideshow li div{
+  z-index: 1000;
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  animation: titleAnimation 36s linear infinite 0s; 
+}
+
+.cb-slideshow li div h4 { 
+  font-family: 'Lato', sans-serif;
+  font-size: 240px;
+  padding: 0;
+  line-height: 200px; 
+}
+
+li{
+  list-style: none;
+}
+
+.cb-slideshow li:nth-child(1) span{
+  //background-image: url(/media/neb.jpg);
+  background: linear-gradient(white, #62D5FE);
+  //background: linear-gradient(#0CFE94, #62D5FE);
+}
+.cb-slideshow li:nth-child(2) span{
+  //background-image: url(/media/car6.jpg);
+  //background: linear-gradient(blue, gold);
+  background: linear-gradient(white, #0cfe94);
+  animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+  //background-image: url(/media/car5.jpg);
+  //background: linear-gradient(turquoise, maroon);
+  background: linear-gradient(white, maroon);
+  animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+  //background-image: url(/media/car1.jpg);
+  //background: linear-gradient(yellow, hotpink);
+  background: linear-gradient(white, hotpink);
+  animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+  //background-image: url(/media/car3.jpg);
+  //background: linear-gradient(steelblue, red);
+  background: linear-gradient(white, orange);
+  animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+  //background-image: url(/media/car4.jpg);
+  //background: linear-gradient(purple, green);
+  background: linear-gradient(white, yellow);
+  animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(2) div{ 
+  animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div{ 
+  animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div{ 
+  animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div{ 
+  animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div{ 
+  animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+  0% { opacity: 0 }
+  8% { opacity: 1 }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+  0% { opacity: 0 }
+  8% { opacity: 1 }
+  17% { opacity: 1 }
+  19% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+
+//------Background Slideshow CSS------------
+
+
+
