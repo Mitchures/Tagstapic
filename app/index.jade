@@ -13,7 +13,7 @@ html(class='no-js', lang='en')
     script(src='/js/vendor/modernizr.js')
 body
   //-----Background Slideshow-------
-  #slideshow
+  #background-slideshow
     ul.cb-slideshow
       li
         span Image 1
@@ -45,28 +45,29 @@ body
       ul.right
         li.active
           a.links(href='https://github.com/MitchellSH')
-            i(class='fa fa-github fa-2x')
+            i.accounts(class='fa fa-github fa-2x')
         li.active
           a.links(href='https://twitter.com/Mitch_Hollander')
-            i(class='fa fa-twitter fa-2x')
+            i.accounts(class='fa fa-twitter fa-2x')
         li.active
           a.links(href='http://instagram.com/mitchell_hollander')
-            i(class='fa fa-instagram fa-2x')
+            i.accounts(class='fa fa-instagram fa-2x')
         li.active
           a.links(href='https://plus.google.com/u/0/111891834390020142373/posts')
-            i(class='fa fa-google-plus fa-2x')
+            i.accounts(class='fa fa-google-plus fa-2x')
       ul.left
-             li.has-dropdown.full-width.not-click
+             li.has-dropdown.full-width
                 a(href='#')#menu MENU
                   i(class='fa fa-bars fa-1x')
                 ul.dropdown
                   li.list
                     a.search#search Search Tag
+                    a.create Create A Slideshow
 
   //-----Top Nav Bar----------------
               
               
-  //-----Title and Search Bar-------
+  //-----Title, slideshow, and Search Bar-------
   .row
     .small-12.columns
       #container
@@ -76,11 +77,23 @@ body
       #container2
         #pic-box 
           #target
-        input#search-box(type='text', placeholder='Search Tag')
+        input#search-box(type='text', placeholder='Search Tag' autofocus='true')
         a#bam(href='#')
           i#search-icon(class='fa fa-search fa-2x')
+  .row
+    .small-12.columns
+      #container3
+        #APIslideshow
 
-  //-----Title and Search Bar--------
+  //-----Title, Slideshow, and Search Bar--------
+
+  //-----Test Slideshow--------------------------
+
+  .row
+    .small-12.columns
+
+
+  //-----Test Slideshow--------------------------
 
 
 
