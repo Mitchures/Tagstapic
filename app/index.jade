@@ -37,26 +37,26 @@ body
   //-----Background Slideshow--------
 
   //-----Top Nav Bar-----------------
-  .nav.top-bar(data-topbar)
+  .nav.top-bar(data-magellan-expedition='fixed')
     section.top-bar-section
       ul.text-area
         li.name
           a#tagstapic TAGSTAPIC
       ul.right
-        li.active
+        li(data-magellan-arrival)
           a.links(href='https://github.com/MitchellSH')
             i.accounts(class='fa fa-github fa-2x')
-        li.active
+        li(data-magellan-arrival)
           a.links(href='https://twitter.com/Mitch_Hollander')
             i.accounts(class='fa fa-twitter fa-2x')
-        li.active
+        li(data-magellan-arrival)
           a.links(href='http://instagram.com/mitchell_hollander')
             i.accounts(class='fa fa-instagram fa-2x')
-        li.active
+        li(data-magellan-arrival)
           a.links(href='https://plus.google.com/u/0/111891834390020142373/posts')
             i.accounts(class='fa fa-google-plus fa-2x')
       ul.left
-             li.has-dropdown.full-width
+             li.has-dropdown.full-width(data-magellan-arrival)
                 a(href='#')#menu MENU
                   i(class='fa fa-bars fa-1x')
                 ul.dropdown
@@ -72,6 +72,7 @@ body
     .small-12.columns
       #container
         h1#title #Tagstapic
+        .box
   .row
     .small-12.columns
       #container2
@@ -83,21 +84,30 @@ body
   .row
     .small-12.columns
       #container3
-        #APIslideshow
+        #Q
 
   //-----Title, Slideshow, and Search Bar--------
 
   //-----Test Slideshow--------------------------
 
-  .row
+  //.row
     .small-12.columns
+      #slideshow-container
+        figure#slideshow
+          img(src='#')
+          img(src='#')
+          img(src='#')
+          img(src='#')
+          img(src='#')
+          img(src='#')
 
 
   //-----Test Slideshow--------------------------
 
 
 
-  script(src='/js/vendor/jqueryUI.js')
+  //script(src='/js/vendor/jqueryUI.js')
+  script(src='/js/vendor/prefixfree.min.js')
   script(src='/js/vendor/jquery.js')
   script(src='/js/vendor/jquery.flip.min.js')
   script(src='/js/vendor/foundation.min.js')

@@ -10,6 +10,7 @@
     $('#tagstapic').click(homeButton);
     $('#bam').click(getPics);
     $('.create').click(create);
+    $(document).on('click','img',add2Q);
   }
 
   //------Minor Show and Hide Functions--------
@@ -28,6 +29,7 @@
 
   function homeButton(){
     emptyPics();
+    $('#Q').empty();
     $('#title').text('#Tagstapic');
     $('#container2').hide();
     $('#container3').hide();
@@ -36,17 +38,33 @@
 
   function emptyPics(){
     $('#target').empty();
-    $('#APIslideshow').empty();
   }
   //------Show and Hide Functions--------
 
   //------Test Functions-----------------
 
-  
+  /*window.onload = function(){
+    imgs = document.getElementById('slideshow').children;
+    interval = 8000;
+    currentPic = 0;
+    imgs[currentPic].style.animation = 'fadey '+interval+'ms';
+    var infiniteLoop = setInterval(function(){
+      imgs[currentPic].removeAttribute('style');
+      if ( currentPic === imgs.length - 1) { currentPic = 0; } else { currentPic++; }
+      imgs[currentPic].style.animation = 'fadey '+interval+'ms';
+    }, interval);
+  }*/
 
+  
   //------Test Functions-----------------
 
 
+  //------Adding To Q Functions----------
+
+  function add2Q(){
+    $('#Q').append($(this));
+  }
+  //------Adding To Q Functions----------
 
 
   //------Instagram API Functions--------
@@ -64,7 +82,6 @@
     var pics = instaData.data;
     for(var i=0; i < pics.length; i++){
       $('#target').append('<img src="'+pics[i].images.thumbnail.url+'">');
-      $('#APIslideshow').append('<img src="'+pics[i].images.thumbnail.url+'">');
     }
   }
 
