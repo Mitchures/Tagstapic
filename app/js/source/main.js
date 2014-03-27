@@ -15,6 +15,7 @@
 
   //------Minor Show and Hide Functions--------
 
+
   function create(){
     $('#title').text('#Create Slideshow');
     $('#container2').hide();
@@ -41,28 +42,18 @@
   }
   //------Show and Hide Functions--------
 
-  //------Test Functions-----------------
-
-  /*window.onload = function(){
-    imgs = document.getElementById('slideshow').children;
-    interval = 8000;
-    currentPic = 0;
-    imgs[currentPic].style.animation = 'fadey '+interval+'ms';
-    var infiniteLoop = setInterval(function(){
-      imgs[currentPic].removeAttribute('style');
-      if ( currentPic === imgs.length - 1) { currentPic = 0; } else { currentPic++; }
-      imgs[currentPic].style.animation = 'fadey '+interval+'ms';
-    }, interval);
-  }*/
-
-  
-  //------Test Functions-----------------
+ 
 
 
   //------Adding To Q Functions----------
 
   function add2Q(){
-    $('#Q').append($(this));
+    if($('#Q').children('img').length < 6 || !$('#Q').children('img').length){
+      $('#Q').append(this);
+      var $li = $('<li>');
+      $li.append($(this).clone());
+      $('.orbitSlider').append($li);
+    }
   }
   //------Adding To Q Functions----------
 
