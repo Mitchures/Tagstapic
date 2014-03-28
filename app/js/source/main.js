@@ -8,8 +8,12 @@
     $(document).foundation();
     $('#start').click(showSearchBar);
     $('#tagstapic').click(homeButton);
-    $('#bam').click(getPics);
     $(document).on('click','img',add2Q);
+    $('#search-box').keypress(function(e){
+      if(e.keyCode===13){
+        getPics();
+      }
+    });
   }
 
   //------Minor Show and Hide Functions--------
@@ -46,7 +50,10 @@
     if($('#Q-box').children('img').length < 6 || !$('#Q-box').children('img').length){
       $('#Q-box').append(this);
       var $li = $('<li>');
-      $li.append($(this).clone());
+      var $bigPic = $(this).clone().attr('src');
+      $bigPic = $bigPic.replace('_5','_6');
+      console.log($bigPic);
+      $li.append('<img src="' +$bigPic+ '">');
       $('.orbitSlider').append($li);
     }
   }
