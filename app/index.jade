@@ -41,7 +41,7 @@ body
     section.top-bar-section
       ul.text-area
         li.name
-          a#tagstapic Tagstapic
+          a.start#start Start
       ul.right
         li(data-magellan-arrival)
           a.links(href='https://github.com/MitchellSH')
@@ -57,9 +57,7 @@ body
             i.accounts(class='fa fa-google-plus fa-2x')
       ul.left
         li(data-magellan-arrival)
-          a.search#search Search Tag
-        li(data-magellan-arrival)
-          a.create Create A Slideshow
+          a#tagstapic Reset
 
   //-----Top Nav Bar----------------
               
@@ -69,19 +67,21 @@ body
     .small-12.columns
       #container
         h1#title #Tagstapic
-        .box
+        p#title-p
   .row
     .small-12.columns
       #container2
-        #pic-box 
-          #target
-        input#search-box(type='text', placeholder='Search Tag' autofocus='true')
+        input#search-box(type='text', placeholder='Search #Tag' autofocus='true')
         a#bam(href='#')
           i#search-icon(class='fa fa-search fa-2x')
+        #pic-box 
+          #target
+        i#down-arrow(href='#', class='fa fa-angle-down fa-4x')
   .row
     .small-12.columns
       #container3
-        #Q
+        p Your Selected Pics:
+        #Q-box
         a.button#bFB(href='#', data-reveal-id='myModal' data-reveal) Big Friendly Button
         #myModal.reveal-modal(data-reveal)
           h3 Tagstapic Slideshow

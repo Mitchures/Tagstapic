@@ -6,32 +6,27 @@
 
   function initialize(){
     $(document).foundation();
-    $('#search').click(showSearchBar);
+    $('#start').click(showSearchBar);
     $('#tagstapic').click(homeButton);
     $('#bam').click(getPics);
-    $('.create').click(create);
     $(document).on('click','img',add2Q);
   }
 
   //------Minor Show and Hide Functions--------
 
 
-  function create(){
-    $('#title').text('#Create Slideshow');
-    $('#container2').hide();
-    $('#container3').show();
-  }
-
   function showSearchBar(){
     $('#container2').show();
-    $('#container3').hide();
-    $('#title').text('#Search Tags');
+    $('#container3').show();
+    $('#title').text('Search #Tags');
+    $('#title-p').text('Search and Select 6 Pics.');
   }
 
   function homeButton(){
     emptyPics();
-    $('#Q').empty();
+    $('#Q-box').empty();
     $('#title').text('#Tagstapic');
+    $('#title-p').text('');
     $('#container2').hide();
     $('#container3').hide();
     $('#search-box').val('');
@@ -48,8 +43,8 @@
   //------Adding To Q Functions----------
 
   function add2Q(){
-    if($('#Q').children('img').length < 6 || !$('#Q').children('img').length){
-      $('#Q').append(this);
+    if($('#Q-box').children('img').length < 6 || !$('#Q-box').children('img').length){
+      $('#Q-box').append(this);
       var $li = $('<li>');
       $li.append($(this).clone());
       $('.orbitSlider').append($li);
