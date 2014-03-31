@@ -7,7 +7,12 @@
   function initialize(){
     $(document).foundation();
     $('#start').click(showSearchBar);
-    $('#tagstapic').click(homeButton);
+    $('.tagstapic').click(homeButton);
+    $('#invert').click(invertPic);
+    $('#sepia').click(sepiaPic);
+    $('#gray').click(grayscalePic);
+    $('#crazy').click(gangnam);
+    $('#rock').click(rockN);
     $(document).on('click','img',add2Q);
     $('#search-box').keypress(function(e){
       if(e.keyCode===13){
@@ -38,8 +43,57 @@
 
   function emptyPics(){
     $('#target').empty();
+    $('.orbitSlider').empty();
   }
+
+  
   //------Show and Hide Functions--------
+
+  //------Music Functions----------------
+
+
+  function rockN(){
+    document.getElementById('black').play();
+    document.getElementById('gang').pause();
+  }
+
+  function gangnam(){
+    document.getElementById('gang').play();
+    document.getElementById('black').pause();
+  }
+
+
+
+
+
+  //------Music Functions----------------
+
+  //------Filter Functions---------------
+
+  function invertPic(){
+    $('.orbitSlider img').removeClass();
+    $('.orbitSlider img').addClass('inverted');
+
+  }
+
+  function grayscalePic(){
+    $('.orbitSlider img').removeClass();
+    $('.orbitSlider img').addClass('grayscale');
+
+  }
+
+  function sepiaPic(){
+    $('.orbitSlider img').removeClass();
+    $('.orbitSlider img').addClass('sepia');
+
+  }
+
+  
+
+  
+
+
+  //------Filter Functions---------------
 
  
 
