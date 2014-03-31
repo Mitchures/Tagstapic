@@ -39,11 +39,12 @@
     $('#container2').hide();
     $('#container3').hide();
     $('#search-box').val('');
+    $('.orbitSlider').empty();
   }
 
   function emptyPics(){
     $('#target').empty();
-    $('.orbitSlider').empty();
+    
   }
 
   
@@ -106,7 +107,6 @@
       var $li = $('<li>');
       var $bigPic = $(this).clone().attr('src');
       $bigPic = $bigPic.replace('_5','_6');
-      console.log($bigPic);
       $li.append('<img src="' +$bigPic+ '">');
       $('.orbitSlider').append($li);
     }
