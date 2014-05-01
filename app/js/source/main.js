@@ -4,6 +4,8 @@
 
   $(document).ready(initialize);
 
+  //------Click Events------------------------
+
   function initialize(){
     $(document).foundation();
     $('#start').click(showSearchBar);
@@ -20,6 +22,9 @@
       }
     });
   }
+
+  //------Click Events-------------------------
+
 
   //------Minor Show and Hide Functions--------
 
@@ -48,7 +53,10 @@
   }
 
   
-  //------Show and Hide Functions--------
+  //------Minor Show and Hide Functions--------
+
+
+
 
   //------Music Functions----------------
 
@@ -68,6 +76,8 @@
 
 
   //------Music Functions----------------
+
+
 
   //------Filter Functions---------------
 
@@ -89,11 +99,6 @@
 
   }
 
-  
-
-  
-
-
   //------Filter Functions---------------
 
  
@@ -112,6 +117,9 @@
     }
   }
   //------Adding To Q Functions----------
+
+
+
 
 
   //------Instagram API Functions--------
